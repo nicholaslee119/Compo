@@ -1,0 +1,23 @@
+{
+  "name": "compo",
+  "version": "0.0.1",
+  "description": "a nodeJS template engine which implements web component",
+  "main": "index",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicholaslee119/compo.git"
+  },
+  "keywords": [
+    "nodejs",
+    "webcomponent"
+  ],
+  "author": "nicholaslee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicholaslee119/compo/issues"
+  },
+  "homepage": "https://github.com/nicholaslee119/compo#readme"
+}
