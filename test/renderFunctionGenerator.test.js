@@ -21,4 +21,9 @@ describe('renderFunctionGenerator tests', function(){
     const html = render(`<p>hello {if $male}{$mr}{else}{$ms}{/if}{$name}!</p>`, {name:'nic', mr:'Mr.', ms:'Ms.', male:true})
     expect(html).toBe('<p>hello Mr.nic!</p>');
   })
+
+  it('test {if}{elseif}{/if}', function(){
+    const html = render(`<p>hello {if $sex==='male'}{$mr}{elseif $sex==='female'}{$ms}{/if}{$name}!</p>`, {name:'nic', mr:'Mr.', ms:'Ms.', sex:'homo'})
+    expect(html).toBe('<p>hello nic!</p>');
+  })
 });
