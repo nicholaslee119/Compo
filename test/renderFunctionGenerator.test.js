@@ -16,4 +16,9 @@ describe('renderFunctionGenerator tests', function(){
     const html = render(`<p>hello  {if $flag}{$title} {/if}{$name}!</p>`, {name:'nic', title:'Mr.', flag:false})
     expect(html).toBe('<p>hello  nic!</p>');
   })
+
+  it('test {if}{else}{/if}', function(){
+    const html = render(`<p>hello {if $male}{$mr}{else}{$ms}{/if}{$name}!</p>`, {name:'nic', mr:'Mr.', ms:'Ms.', male:true})
+    expect(html).toBe('<p>hello Mr.nic!</p>');
+  })
 });
