@@ -1,7 +1,6 @@
+const renderFunctionGenerator = require('./lib/renderFunctionGenerator');
 
 module.exports = function (template, data) {
-  const html = '';
-  const renderFunction = renderFunctionGenerator(template);
-  html = renderFunction(data);
-  return html;
+  const renderFunction = renderFunctionGenerator(template, data, {});
+  return renderFunction(data);
 }
