@@ -26,4 +26,9 @@ describe('renderFunctionGenerator tests', function(){
     const html = render(`<p>hello {if $sex==='male'}{$mr}{elseif $sex==='female'}{$ms}{/if}{$name}!</p>`, {name:'nic', mr:'Mr.', ms:'Ms.', sex:'homo'})
     expect(html).toBe('<p>hello nic!</p>');
   })
+
+  it('test {foreach}', function(){
+    const html = render(`<p>hello {foreach $list as $item}{$item}, {/foreach}</p>`, {list: [1, 2, 3, 5]})
+    expect(html).toBe('<p>hello 1, 2, 3, 5, </p>');
+  })
 });
