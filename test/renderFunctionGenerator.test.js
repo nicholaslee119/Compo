@@ -37,4 +37,9 @@ describe('renderFunctionGenerator tests', function(){
     expect(html).toBe('<p>hello nicholas</p>');
   })
 
+  it('test {include}', function(){
+    const html = render(`<p>hello {include file='./test/fixtures/componentA.compo'}</p>`, {name: 'NICHOLAS'})
+    expect(html).toBe('<p>hello <p>componentA</p></p>');
+  })
+
 });
