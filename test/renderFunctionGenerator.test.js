@@ -31,4 +31,10 @@ describe('renderFunctionGenerator tests', function(){
     const html = render(`<p>hello {foreach $list as $item}{$item}, {/foreach}</p>`, {list: [1, 2, 3, 5]})
     expect(html).toBe('<p>hello 1, 2, 3, 5, </p>');
   })
+
+  it('test filter', function(){
+    const html = render(`<p>hello {$name | lowCase}</p>`, {name: 'NICHOLAS'})
+    expect(html).toBe('<p>hello nicholas</p>');
+  })
+
 });
